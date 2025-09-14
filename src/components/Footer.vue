@@ -13,7 +13,7 @@
             "Fluid Calculator" from
             <a
                 class="footer__link footer__link--primary"
-                href="https://css-for-js.dev/"
+                href="https://www.joshwcomeau.com/"
                 target="_blank"
                 rel="noopener noreferrer"
             >

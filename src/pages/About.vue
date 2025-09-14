@@ -7,7 +7,7 @@
         <section class="intro">
             <p>
                 I was going through Josh Comeau's
-                <a href="https://css-for-js.dev/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.joshwcomeau.com/" target="_blank" rel="noopener noreferrer">
                     CSS for JS devs
                 </a>
                 course which is one of the best courses on CSS in general and I recommend checking

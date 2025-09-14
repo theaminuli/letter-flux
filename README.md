@@ -88,8 +88,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgments
 
-- Inspired by Josh Comeau's "Fluid Calculator" from [CSS for JS devs](https://css-for-js.dev/) course
-- Original concept by Adrian Bece
+- Inspired by Josh Comeau's "Fluid Calculator" from [CSS for JS devs](https://www.joshwcomeau.com/)
 
 ---
 
