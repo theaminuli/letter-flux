@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/theaminuli/letter-flux/refs/heads/main/screenshot.png" alt="letter-flux" width="600"/>
+  <img src="https://raw.githubusercontent.com/theaminuli/letter-flux/refs/heads/main/screenshot.png" alt="letter-flux"/>
 </div>
 
 # LetterFlux
