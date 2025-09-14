@@ -1,0 +1,73 @@
+input[type='range'] {
+    background: transparent;
+    -webkit-appearance: none;
+    width: 100%;
+    margin-top: calc(var(--spacing-1) - var(--spacing-n4));
+}
+input[type='range']:focus {
+    outline: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: var(--color-gray-medium);
+    border: 0.2px solid var(--color-gray-medium);
+}
+input[type='range']::-webkit-slider-thumb {
+    border: 1px solid var(--color-gray-light);
+    height: 16px;
+    width: 16px;
+    background: var(--color-gray-light);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+    border-radius: 16px;
+}
+input[type='range']:focus::-webkit-slider-runnable-track {
+    background: var(--color-gray-light);
+}
+input[type='range']::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: var(--color-gray-medium);
+    border: 0.2px solid var(--color-gray-medium);
+}
+input[type='range']::-moz-range-thumb {
+    border: 1px solid var(--color-gray-light);
+    height: 16px;
+    width: 16px;
+    background: var(--color-gray-light);
+    cursor: pointer;
+}
+input[type='range']::-ms-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+}
+input[type='range']::-ms-fill-lower {
+    background: var(--color-gray-light);
+    border: 0.2px solid var(--color-gray-light);
+}
+input[type='range']::-ms-fill-upper {
+    background: var(--color-gray-light);
+    border: 0.2px solid var(--color-gray-light);
+}
+input[type='range']::-ms-thumb {
+    border: 1px solid var(--color-gray-light);
+    height: 16px;
+    width: 16px;
+    background: var(--color-gray-light);
+    cursor: pointer;
+}
+input[type='range']:focus::-ms-fill-lower {
+    background: var(--color-gray-light);
+}
+input[type='range']:focus::-ms-fill-upper {
+    background: var(--color-gray-light);
+}

@@ -1,0 +1,41 @@
+{
+    "name": "letter-flux",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "author": "Aminul Islam",
+    "description": "A modern fluid typography editor built with Vue.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/theaminuli/letter-flux"
+    },
+    "homepage": "https://github.com/theaminuli/letter-flux#readme",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.cts,.mts",
+        "lint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.cts,.mts --fix",
+        "format:all": "npm run format && npm run lint:fix"
+    },
+    "dependencies": {
+        "@floating-ui/dom": "^1.7.4",
+        "chart.js": "^4.4.0",
+        "chartjs-plugin-crosshair": "^2.0.0",
+        "vue": "^3.5.18",
+        "vue-router": "^4.5.1"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^6.0.1",
+        "@vue/eslint-config-prettier": "^10.2.0",
+        "eslint": "^9.35.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-prettier": "^5.5.4",
+        "eslint-plugin-vue": "^10.4.0",
+        "prettier": "^3.6.2",
+        "sass-embedded": "^1.92.1",
+        "vite": "^7.1.2"
+    }
+}

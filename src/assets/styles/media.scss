@@ -1,0 +1,70 @@
+/* Since SCSS doesn't support @custom-media, we'll use mixins instead */
+
+/* Breakpoints */
+$mq-phablet-min: 22.5rem; /* 360px */
+$mq-phablet-max: 26.1875rem; /* 419px */
+$mq-mobileLandscape-min: 35.5rem; /* 568px */
+$mq-tablet-min: 48rem; /* 768px */
+$mq-tablet-max: 64rem; /* 1024px */
+$mq-desktop-min: 64.063rem; /* 1025px */
+$mq-desktop-max: 85.3125rem; /* 1365px */
+$mq-desktopLarge-min: 85.375rem; /* 1366px */
+
+/* Height breakpoint */
+$mq-heightLarge-width: 64rem; /* 1024px */
+$mq-heightLarge-height: 68rem; /* 1088px */
+
+/* Mixins for media queries */
+@mixin mq-phablet-min {
+    @media (min-width: $mq-phablet-min) {
+        @content;
+    }
+}
+
+@mixin mq-phablet-max {
+    @media (max-width: $mq-phablet-max) {
+        @content;
+    }
+}
+
+@mixin mq-mobileLandscape-min {
+    @media (min-width: $mq-mobileLandscape-min) {
+        @content;
+    }
+}
+
+@mixin mq-tablet-min {
+    @media (min-width: $mq-tablet-min) {
+        @content;
+    }
+}
+
+@mixin mq-tablet-max {
+    @media (max-width: $mq-tablet-max) {
+        @content;
+    }
+}
+
+@mixin mq-desktop-min {
+    @media (min-width: $mq-desktop-min) {
+        @content;
+    }
+}
+
+@mixin mq-desktop-max {
+    @media (max-width: $mq-desktop-max) {
+        @content;
+    }
+}
+
+@mixin mq-desktopLarge-min {
+    @media (min-width: $mq-desktopLarge-min) {
+        @content;
+    }
+}
+
+@mixin mq-heightLarge {
+    @media (min-width: $mq-heightLarge-width) and (min-height: $mq-heightLarge-height) {
+        @content;
+    }
+}

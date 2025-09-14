@@ -1,0 +1,12 @@
+node_modules
+dist
+build
+.nuxt
+.next
+.vitepress/dist
+.vitepress/cache
+coverage
+*.min.js
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
