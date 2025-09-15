@@ -4,7 +4,7 @@
             <InputWithRange
                 id="root-font-size"
                 unit="px"
-                label="Root font size"
+                label="Root size"
                 :min="1"
                 :max="64"
                 v-model="rootFontSize"
