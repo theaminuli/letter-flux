@@ -73,6 +73,8 @@ Fluid typography is a modern approach to responsive design that allows font size
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+### Contributor List
+- xyz (@xyz)
 
 ## 📄 License
 
