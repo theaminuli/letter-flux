@@ -4,7 +4,7 @@
             <div>
                 <h1 class="header__title">
                     <router-link class="header__link header__link--title" to="/">
-                       LetterFlux
+                        LetterFlux
                     </router-link>
                 </h1>
                 <h2
@@ -73,14 +73,14 @@
 
 <script setup>
     import { onMounted, ref } from 'vue'
-import { currentSubtitle } from '../stores/currentSubtitle.js'
+    import { currentSubtitle } from '../stores/currentSubtitle.js'
 
     const subtitles = [
-		'Created by',
-		'Brought to life under the Shadow Proclamation by',
+        'Created by',
+        'Brought to life under the Shadow Proclamation by',
         'Created according to the Shadow Proclamation by',
-		'Created according to the Codex Astartes by',
-		'In the spirit of the Shadow Proclamation, created by'
+        'Created according to the Codex Astartes by',
+        'In the spirit of the Shadow Proclamation, created by'
     ]
 
     const hasChanged = ref(false)
@@ -170,7 +170,7 @@ import { currentSubtitle } from '../stores/currentSubtitle.js'
     .header__link--subtitle {
         display: inline-block;
         text-decoration: underline;
-		color: var(--color-secondary);
+        color: var(--color-secondary);
     }
 
     .header__link--subtitle:hover {

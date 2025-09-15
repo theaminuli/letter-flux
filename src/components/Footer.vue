@@ -33,12 +33,12 @@
                 target="_blank"
                 rel="noopener noreferrer"
             >
-               typography scaling.
+                typography scaling.
             </a>
         </p>
         <p class="footer__section">
             Designed and developed with Vue.js by
-			<i class="fa-solid fa-heart footer__icon" />
+            <i class="fa-solid fa-heart footer__icon" />
             <a
                 class="footer__link footer__link--secondary"
                 href="https://github.com/theaminuli"
@@ -46,7 +46,6 @@
                 rel="noopener noreferrer"
             >
                 Aminul Islam
-				
             </a>
         </p>
         <ul class="footer__links">

@@ -41,6 +41,7 @@
         justify-content: space-between;
         margin-bottom: var(--spacing-1);
         isolation: isolate;
+        align-items: center;
 
         @include media.mq-desktopLarge-min {
             display: flex;
@@ -48,17 +49,22 @@
     }
 
     .tabs-wrapper__utils {
-        grid-gap: var(--spacing-1);
+        gap: 10px;
         margin-bottom: var(--spacing-1);
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
 
         @include media.mq-tablet-min {
-            grid-template-columns: 1fr 1fr;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
         }
 
         @include media.mq-desktopLarge-min {
             margin-bottom: 0;
-            grid-template-columns: auto auto;
+            justify-content: flex-end;
+            flex-shrink: 0;
         }
     }
 
@@ -87,7 +93,6 @@
 
         @include media.mq-mobileLandscape-min {
             flex-grow: initial;
-            min-width: calc(2 * var(--spacing-4));
             padding: var(--spacing-n1) var(--spacing-1);
         }
     }
