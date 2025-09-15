@@ -4,20 +4,36 @@
             Inspired by
             <a
                 class="footer__link footer__link--primary"
-                href="https://www.joshwcomeau.com/"
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                Josh Comeau's
+                MDN CSS clamp,
             </a>
-            "Fluid Calculator" from
             <a
                 class="footer__link footer__link--primary"
-                href="https://www.joshwcomeau.com/"
+                href="https://css-tricks.com/almanac/functions/c/clamp/"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                (CSS for JS Developers).
+                CSS-Tricks clamp guide,
+            </a>
+            <a
+                class="footer__link footer__link--primary"
+                href="https://web.dev/articles/min-max-clamp"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Web.dev responsive design
+            </a>
+            and
+            <a
+                class="footer__link footer__link--primary"
+                href="https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+               typography scaling.
             </a>
         </p>
         <p class="footer__section">

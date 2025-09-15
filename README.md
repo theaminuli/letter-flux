@@ -86,9 +86,14 @@ This project is open source and available under the [MIT License](LICENSE).
 - Twitter: [@theaminuli](https://twitter.com/theaminuli)
 - LinkedIn: [theaminuli](https://linkedin.com/in/theaminuli)
 
-## 🙏 Acknowledgments
+## 🙏 Inspiration & Resources
 
-- Inspired by Josh Comeau's "Fluid Calculator" from [CSS for JS devs](https://www.joshwcomeau.com/)
+This project was inspired by comprehensive research and learning from these excellent resources:
+
+- [MDN CSS clamp Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp) - Official CSS clamp() reference
+- [CSS-Tricks clamp Guide](https://css-tricks.com/almanac/functions/c/clamp/) - Comprehensive clamp() function guide
+- [Web.dev Responsive Design](https://web.dev/articles/min-max-clamp) - Modern responsive design techniques
+- [CSS-Tricks Fluid Typography](https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/) - Viewport-based font scaling
 
 ---
 
