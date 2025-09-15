@@ -11,12 +11,19 @@
                 ]"
             />
         </button>
-        <pre class="snippet__wrapper"><code class="snippet__code">{{ text }}</code></pre>
+        <pre class="snippet__wrapper"><code class="snippet__code">{{ generatedCSS }}</code></pre>
     </div>
+    <PropertySelect v-model="selectedProperty" id="css-property-select" />
 </template>
 
 <script setup>
-    import { ref } from 'vue'
+    import { computed, ref } from 'vue'
+    import {
+        copyToClipboard as copyTextToClipboard,
+        generateCSS,
+        triggerAnimation
+    } from '../utils/snippetUtils.js'
+    import PropertySelect from './PropertySelect.vue'
 
     const props = defineProps({
         text: {
@@ -26,16 +33,17 @@
     })
 
     const isAnimated = ref(false)
+    const selectedProperty = ref('font-size')
+
+    // Generate CSS using utility function
+    const generatedCSS = computed(() => {
+        return generateCSS(selectedProperty.value, props.text)
+    })
 
     const copyToClipboard = async () => {
-        try {
-            await navigator.clipboard.writeText(props.text)
-            isAnimated.value = true
-            setTimeout(() => {
-                isAnimated.value = false
-            }, 300)
-        } catch (err) {
-            console.error('Failed to copy text: ', err)
+        const success = await copyTextToClipboard(generatedCSS.value)
+        if (success) {
+            triggerAnimation(isAnimated, 300)
         }
     }
 </script>
