@@ -77,7 +77,7 @@ For example:
 .title {
   font-size: clamp(1rem, 2vw + 1rem, 2.5rem);
 }
-
+```
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
