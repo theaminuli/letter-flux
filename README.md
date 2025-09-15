@@ -68,13 +68,19 @@ npm run format:all   # Format and fix all issues
 
 ## 🎨 What is Fluid Typography?
 
-Fluid typography is a modern approach to responsive design that allows font sizes to scale smoothly between minimum and maximum values based on viewport width, using CSS `clamp()` function.
+Fluid typography is a modern approach to responsive design that allows font sizes to scale smoothly between minimum and maximum values based on viewport width.  
+It uses the CSS [`clamp()`](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp) function to define a value that adapts automatically across screen sizes.
+
+For example:
+
+```css
+.title {
+  font-size: clamp(1rem, 2vw + 1rem, 2.5rem);
+}
 
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-### Contributor List
-- GitHub: [@xyz](https://github.com/xyz)
 
 ## 📄 License
 
