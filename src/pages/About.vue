@@ -188,6 +188,45 @@
                 performance or functionality.
             </p>
         </section>
+
+		<section>
+			<h2>Responsive properties</h2>
+			<p>
+				In addition to <strong>fluid typography</strong>, this editor also supports
+				generating responsive values for various CSS properties.  
+				You can choose from a dropdown list of properties such as:
+			</p>
+			<ul>
+				<li>Font Size</li>
+				<li>Line Height</li>
+				<li>Letter Spacing</li>
+				<li>Word Spacing</li>
+				<li>Margin</li>
+				<li>Padding</li>
+				<li>Gap</li>
+				<li>Position (Top, Right, Bottom, Left)</li>
+			</ul>
+
+			<p>
+				Each selected property will generate a corresponding
+				<code>clamp()</code> formula, ensuring responsive behavior
+				across devices. For example:
+			</p>
+
+			<pre><code>
+			/* Example: Responsive top spacing */
+			top: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+
+			/* Example: Responsive margin */
+			margin: clamp(12px, 1vw + 0.5rem, 32px);
+			</code></pre>
+
+			<p>
+				This allows you to build layouts that adapt smoothly
+				without relying on fixed breakpoints.
+			</p>
+		</section>
+
     </main>
 </template>
 
