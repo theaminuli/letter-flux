@@ -1,16 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+        http://www.google.com/schemas/sitemap-image/1.1
+        http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
+  
+  <!-- LetterFlux - Fluid CSS Properties Generator Tool -->
+  
+  <!-- Homepage - Interactive Fluid CSS Properties Editor -->
+  <url>
+		<loc>https://letter-flux.vercel.app/</loc>
+		<lastmod>2025-09-17T00:00:00+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>1.00</priority>
 
-  <url>
-    <loc>https://modern-fluid-typography.vercel.app/</loc>
-    <lastmod>2021-12-06T07:32:10+00:00</lastmod>
-    <priority>1.00</priority>
+		<!-- Main screenshot -->
+		<image:image>
+			<image:loc>https://letter-flux.vercel.app/screenshot.png</image:loc>
+			<image:title>LetterFlux - Fluid CSS Properties Generator Interface</image:title>
+			<image:caption>Interactive tool for creating responsive CSS clamp() functions for typography, spacing, sizing, and positioning properties</image:caption>
+		</image:image>
   </url>
+  
+  <!-- About Page - Project Information & User Guide -->
   <url>
-    <loc>https://modern-fluid-typography.vercel.app/about</loc>
-    <lastmod>2021-12-06T07:32:10+00:00</lastmod>
-    <priority>0.80</priority>
+		<loc>https://letter-flux.vercel.app/about</loc>
+		<lastmod>2025-09-17T00:00:00+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.80</priority>
+		
+		<!-- Editor interface screenshot -->
+		<image:image>
+			<image:loc>https://letter-flux.vercel.app/images/editor.png</image:loc>
+			<image:title>LetterFlux Editor Interface</image:title>
+			<image:caption>Property selection dropdown and fluid CSS configuration controls with min/max constraints and rate adjustments</image:caption>
+		</image:image>
+		
+		<!-- Code snippet preview -->
+		<image:image>
+			<image:loc>https://letter-flux.vercel.app/images/snippet.png</image:loc>
+			<image:title>Generated CSS Clamp Code Snippet</image:title>
+			<image:caption>Auto-generated CSS clamp() function with copy-to-clipboard functionality for easy integration</image:caption>
+		</image:image>
+		
+		<!-- Graph visualization -->
+		<image:image>
+			<image:loc>https://letter-flux.vercel.app/images/graph-increase.png</image:loc>
+			<image:title>Fluid CSS Property Behavior Graph</image:title>
+			<image:caption>Interactive graph showing how CSS property values scale across different viewport widths with visual breakpoint indicators</image:caption>
+		</image:image>
+		
+		<!-- Table view -->
+		<image:image>
+			<image:loc>https://letter-flux.vercel.app/images/table.png</image:loc>
+			<image:title>Responsive Values Table View</image:title>
+			<image:caption>Detailed table breakdown of CSS property values at specific viewport sizes with sorting and filtering options</image:caption>
+		</image:image>
   </url>
+  
+  <!-- Robots.txt -->
+  <url>
+		<loc>https://letter-flux.vercel.app/robots.txt</loc>
+		<lastmod>2025-09-17T00:00:00+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.10</priority>
+  </url>
+  
 </urlset>

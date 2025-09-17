@@ -79,7 +79,7 @@ This tool supports generating fluid values for various CSS properties:
 
 **Typography:** Font Size, Line Height, Letter Spacing, Word Spacing
 
-**Spacing:**  Margin, Padding, Gap
+**Spacing:** Margin, Padding, Gap
 
 **Sizing:** Width, Max Width, Flex Basis
 
