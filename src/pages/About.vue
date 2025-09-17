@@ -7,17 +7,17 @@
         <section class="intro">
             <p>
                 This project was inspired by various excellent resources on modern CSS techniques
-                that you can find linked in the footer section of this website. These resources
-                from CSS experts have explored fluid typography and responsive design concepts,
-                providing the foundation and inspiration for creating a practical tool that goes 
-                beyond simple demonstrations to showcase how fluid CSS properties can adapt across 
-                different screen sizes.
+                that you can find linked in the footer section of this website. These resources from
+                CSS experts have explored fluid typography and responsive design concepts, providing
+                the foundation and inspiration for creating a practical tool that goes beyond simple
+                demonstrations to showcase how fluid CSS properties can adapt across different
+                screen sizes.
             </p>
             <p>
                 I saw an opportunity for doing a <strong>really fun and useful project</strong>. I
-                developed a fully-fledged tool that developers could use on a day-to-day basis 
-                to fine-tune and keep track of their fluid CSS properties including typography, 
-                spacing, sizing, positioning, and layout properties, helping to maintain consistent 
+                developed a fully-fledged tool that developers could use on a day-to-day basis to
+                fine-tune and keep track of their fluid CSS properties including typography,
+                spacing, sizing, positioning, and layout properties, helping to maintain consistent
                 responsive behavior across different breakpoints.
             </p>
         </section>
@@ -25,17 +25,18 @@
         <section>
             <h2>Fluid CSS Properties</h2>
             <p>
-                Fluid CSS is a modern way of approaching responsive design for various CSS properties. Instead of
-                setting fixed values for individual screen sizes, we can set a single
-                fluid value and let the CSS render the appropriate values for a specific screen size
-                constrained by minimum and maximum values. This applies to typography, spacing, sizing, positioning, and layout properties.
+                Fluid CSS is a modern way of approaching responsive design for various CSS
+                properties. Instead of setting fixed values for individual screen sizes, we can set
+                a single fluid value and let the CSS render the appropriate values for a specific
+                screen size constrained by minimum and maximum values. This applies to typography,
+                spacing, sizing, positioning, and layout properties.
             </p>
 
             <p>
-                Try resizing the screen and notice how the "About the project & user guide" title adapts
-                to screen size, but is constrained at some specific minimum and maximum value. This same principle 
-                can be applied to margins, padding, widths, and many other CSS properties. Cool,
-                isn't it?
+                Try resizing the screen and notice how the "About the project & user guide" title
+                adapts to screen size, but is constrained at some specific minimum and maximum
+                value. This same principle can be applied to margins, padding, widths, and many
+                other CSS properties. Cool, isn't it?
             </p>
         </section>
 
@@ -84,7 +85,10 @@
             <h2>Features</h2>
             <p>Here is a short overview of some of the features of this editor:</p>
             <ul>
-                <li>Support for multiple CSS properties (typography, spacing, sizing, positioning, layout)</li>
+                <li>
+                    Support for multiple CSS properties (typography, spacing, sizing, positioning,
+                    layout)
+                </li>
                 <li>Adjust constraints, rate, and relative size for any supported property</li>
                 <li>Adapts to any root font size for relative units</li>
                 <li>Graphical overview of the final fluid values</li>
@@ -125,9 +129,9 @@
             </figure>
             <h3>Graph view</h3>
             <p>
-                Graph view can give you a general overview of fluid CSS property behavior. By hovering
-                over the graph you can inspect individual values on specific screen sizes for any
-                selected property.
+                Graph view can give you a general overview of fluid CSS property behavior. By
+                hovering over the graph you can inspect individual values on specific screen sizes
+                for any selected property.
             </p>
             <figure>
                 <img
@@ -135,9 +139,9 @@
                     alt="Graphic overview of fluid CSS property behavior for default settings"
                 />
                 <figcaption>
-                    A high-level overview of fluid CSS behavior. Fluid value starts
-                    increasing from min-size to max size at around 400px of the viewport width and
-                    it stops at a maximum value at around 1000px,
+                    A high-level overview of fluid CSS behavior. Fluid value starts increasing from
+                    min-size to max size at around 400px of the viewport width and it stops at a
+                    maximum value at around 1000px,
                 </figcaption>
             </figure>
             <p>
@@ -147,10 +151,10 @@
             <h3>Table view</h3>
 
             <p>
-                A table view can give you a more detailed overview of fluid property values for specific
-                viewport sizes. Viewport sizes can be easily added using the adjacent input.
-                Likewise, individual values can be removed from the list by clicking the remove
-                button for a specific value.
+                A table view can give you a more detailed overview of fluid property values for
+                specific viewport sizes. Viewport sizes can be easily added using the adjacent
+                input. Likewise, individual values can be removed from the list by clicking the
+                remove button for a specific value.
             </p>
 
             <figure>
@@ -194,10 +198,11 @@
         <section>
             <h2>Supported CSS Properties</h2>
             <p>
-                This editor supports generating fluid, responsive values for a comprehensive range of CSS properties. 
-                You can choose from a dropdown list of properties organized by category:
+                This editor supports generating fluid, responsive values for a comprehensive range
+                of CSS properties. You can choose from a dropdown list of properties organized by
+                category:
             </p>
-            
+
             <h3>Typography Properties</h3>
             <ul>
                 <li>Font Size</li>
@@ -250,8 +255,8 @@ width: clamp(200px, 50vw, 800px);
 </code></pre>
 
             <p>
-                This allows you to build layouts that adapt smoothly across all device sizes
-                without relying on fixed breakpoints, creating truly fluid and responsive designs.
+                This allows you to build layouts that adapt smoothly across all device sizes without
+                relying on fixed breakpoints, creating truly fluid and responsive designs.
             </p>
         </section>
     </main>

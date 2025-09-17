@@ -1,4 +1,57 @@
+# Robots.txt for LetterFlux - Fluid CSS Properties Generator
+# https://letter-flux.vercel.app/
+# A powerful tool for creating responsive CSS clamp() functions
+
+# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
 
-Sitemap: https://modern-fluid-typography.vercel.app//sitemap.xml
+# Specifically allow important pages for indexing
+Allow: /about
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Allow crawling of static assets
+Allow: /images/
+
+# Disallow crawling of development/build files (if any exist)
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /dist/
+Disallow: /.env
+Disallow: /*.log
+Disallow: /*.css
+Disallow: /*.js
+
+# Crawl delay (optional - helps prevent server overload)
+# Crawl-delay: 1
+
+# Special rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block known bad bots (optional)
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://letter-flux.vercel.app/sitemap.xml
+
+# Additional information
+# Host: https://letter-flux.vercel.app
+# Contact: https://github.com/theaminuli/letter-flux
