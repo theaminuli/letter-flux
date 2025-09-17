@@ -1,3 +1,10 @@
+/**
+ * Retrieves an existing tooltip element for the given chart, or creates one if it doesn't exist.
+ * The tooltip is styled and appended to the chart's parent node.
+ *
+ * @param {Object} chart - The chart instance containing the canvas element.
+ * @returns {HTMLDivElement} The tooltip DOM element associated with the chart.
+ */
 export const getOrCreateTooltip = (chart) => {
     let tooltipEl = chart.canvas.parentNode.querySelector('#chart-tooltip')
 
@@ -24,6 +31,14 @@ export const getOrCreateTooltip = (chart) => {
     return tooltipEl
 }
 
+/**
+ * Handles the display and positioning of an external tooltip for a chart.
+ *
+ * @param {Object} context - The context object containing chart and tooltip information.
+ * @param {Object} context.chart - The chart instance.
+ * @param {Object} context.tooltip - The tooltip instance with properties such as opacity, body, title, caretX, etc.
+ * @returns {void}
+ */
 export const externalTooltipHandler = (context) => {
     const { chart, tooltip } = context
     const tooltipEl = getOrCreateTooltip(chart, tooltip)
