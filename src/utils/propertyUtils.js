@@ -1,5 +1,3 @@
-// CSS Property utilities for the PropertySelect component
-
 /**
  * Get all available CSS property options
  * @returns {Array} Array of property objects with value and label

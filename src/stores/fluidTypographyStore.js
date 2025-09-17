@@ -21,6 +21,19 @@ export const clampValue = computed(() =>
     getClampValue([minSizeRem.value, fluidSize.value, relativeSize.value, maxSizeRem.value])
 )
 
+/**
+ * A computed ref that generates a shareable URL based on the current fluid typography settings.
+ *
+ * The URL is constructed using the following parameters:
+ * - rootFontSize: The base font size for the document.
+ * - minSize: The minimum font size allowed.
+ * - fluidSize: The fluid scaling factor for responsive typography.
+ * - relativeSize: The relative font size adjustment.
+ * - maxSize: The maximum font size allowed.
+ *
+ * @constant
+ * @type {import('vue').ComputedRef<string>}
+ */
 export const shareUrl = computed(() =>
     getShareUrl([
         rootFontSize.value,

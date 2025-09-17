@@ -1,4 +1,7 @@
 import { ref } from 'vue'
 
-// Simple reactive store for current subtitle
+/**
+ * A reactive reference holding the current subtitle value.
+ * @type {import('vue').Ref<string>}
+ */
 export const currentSubtitle = ref('')

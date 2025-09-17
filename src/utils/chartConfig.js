@@ -1,5 +1,13 @@
 import { externalTooltipHandler } from './tooltipHandler.js'
 
+/**
+ * Chart.js configuration options for a scatter plot with custom styling and tooltip behavior.
+ *
+ * @constant
+ * @type {object}
+ * @property {string} type - The chart type ('scatter').
+ * @property {object} data - Data configuration for the chart.
+ */
 export const CHART_OPTIONS = {
     type: 'scatter',
     data: {
