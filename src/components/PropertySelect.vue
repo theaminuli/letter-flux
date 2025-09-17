@@ -77,10 +77,6 @@
             type: String,
             default: 'font-size'
         },
-        label: {
-            type: String,
-            default: 'CSS Property'
-        },
         id: {
             type: String,
             default: 'property-select'

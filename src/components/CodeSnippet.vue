@@ -1,7 +1,12 @@
 <template>
     <div class="snippet">
-        <button class="snippet__button" @click="copyToClipboard">
-            <i class="fa-solid fa-copy" />
+        <button
+            class="snippet__button"
+            @click="copyToClipboard"
+            aria-label="Copy CSS code to clipboard"
+            :aria-describedby="copyStatus ? 'copy-status' : null"
+        >
+            <i class="fa-solid fa-copy" aria-hidden="true" />
             <i
                 :class="[
                     'fa-solid',
@@ -9,9 +14,18 @@
                     'snippet__icon',
                     { 'snippet__icon--animated': isAnimated }
                 ]"
+                aria-hidden="true"
             />
         </button>
-        <pre class="snippet__wrapper"><code class="snippet__code">{{ generatedCSS }}</code></pre>
+        <pre
+            class="snippet__wrapper"
+            role="region"
+            aria-label="Generated CSS code"
+        ><code class="snippet__code" :aria-label="`CSS code: ${generatedCSS}`">{{ generatedCSS }}</code>
+        </pre>
+        <div v-if="copyStatus" id="copy-status" class="sr-only" aria-live="polite">
+            {{ copyStatus }}
+        </div>
     </div>
     <PropertySelect v-model="selectedProperty" id="css-property-select" />
 </template>
@@ -34,6 +48,7 @@
 
     const isAnimated = ref(false)
     const selectedProperty = ref('font-size')
+    const copyStatus = ref('')
 
     // Generate CSS using utility function
     const generatedCSS = computed(() => {
@@ -44,6 +59,15 @@
         const success = await copyTextToClipboard(generatedCSS.value)
         if (success) {
             triggerAnimation(isAnimated, 300)
+            copyStatus.value = 'CSS code copied to clipboard'
+            setTimeout(() => {
+                copyStatus.value = ''
+            }, 3000)
+        } else {
+            copyStatus.value = 'Failed to copy CSS code'
+            setTimeout(() => {
+                copyStatus.value = ''
+            }, 3000)
         }
     }
 </script>
@@ -67,7 +91,8 @@
     }
 
     .snippet__wrapper {
-        padding: var(--spacing-n2) var(--spacing-n1);
+        padding: 0px 10px;
+        display: flex;
         max-width: calc(3 * var(--spacing-5));
         overflow: hidden;
         text-overflow: ellipsis;
@@ -118,6 +143,43 @@
         to {
             opacity: 0;
             transform: translate3d(-50%, -50%, 0) scale(2);
+        }
+    }
+
+    /* Screen reader only text */
+    .sr-only {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+    }
+
+    /* Enhanced focus styles */
+    .snippet__button:focus-visible {
+        outline: 2px solid var(--color-secondary);
+        outline-offset: 2px;
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+        .snippet {
+            border-width: 3px;
+        }
+
+        .snippet__button:focus-visible {
+            outline-width: 3px;
+        }
+    }
+
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+        .snippet__icon--animated {
+            animation: none;
         }
     }
 </style>

@@ -75,11 +75,30 @@
         <!-- Preconnect and DNS Prefetch for Performance -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+        <!-- Preload critical resources -->
+        <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+            as="style"
+        />
+        <link rel="preload" href="/src/main.js" as="script" />
+
+        <!-- Font Awesome CSS - moved to head for better performance -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+            media="print"
+            onload="this.media='all'"
+        />
 
         <!-- Web App Manifest -->
         <link rel="manifest" href="/site.webmanifest" />
 
-        <!-- Canonical URL -->
+        <!-- Favicon and Icons for better accessibility -->
         <link rel="canonical" href="https://letter-flux.vercel.app/" />
 
         <!-- JSON-LD Structured Data -->
@@ -115,8 +134,29 @@
                 }
             }
         </script>
+
+        <style>
+            /* Skip link for keyboard accessibility */
+            .skip-link {
+                position: absolute;
+                top: -40px;
+                left: 6px;
+                background: #000;
+                color: #fff;
+                padding: 8px;
+                text-decoration: none;
+                z-index: 1000;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+            .skip-link:focus {
+                top: 6px;
+            }
+        </style>
     </head>
     <body>
+        <!-- Skip link for keyboard navigation accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
         <div id="app"></div>
         <script type="module" src="/src/main.js"></script>
     </body>

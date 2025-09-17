@@ -117,7 +117,7 @@
                 You can easily copy the value by clicking the button on the left side or by
                 selecting the value and copying it manually.
             </p>
-            <figure>
+            <figure class="figure--bordered">
                 <img
                     src="/images/snippet.png"
                     alt="Generated clamp code snippet with sample values set. Values can be copied by clicking on a button or manually selecting and copying the value."
@@ -133,7 +133,7 @@
                 hovering over the graph you can inspect individual values on specific screen sizes
                 for any selected property.
             </p>
-            <figure>
+            <figure class="figure--bordered">
                 <img
                     src="/images/graph-increase.png"
                     alt="Graphic overview of fluid CSS property behavior for default settings"
@@ -157,7 +157,7 @@
                 remove button for a specific value.
             </p>
 
-            <figure>
+            <figure class="figure--bordered">
                 <img
                     src="/images/table.png"
                     alt="Table view of fluid behavior for specific set of screen sizes."
@@ -409,6 +409,13 @@ width: clamp(200px, 50vw, 800px);
         max-width: 100%;
         margin: 0 auto;
         display: block;
+    }
+
+    .figure--bordered {
+        border: 2px solid var(--color-secondary-tint);
+        border-radius: var(--spacing-n2);
+        padding: var(--spacing-1);
+        background-color: var(--color-secondary-faded);
     }
 
     @keyframes movement {

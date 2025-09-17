@@ -41,8 +41,10 @@
                             target="_blank"
                             class="header__link header__link--social"
                             rel="noopener noreferrer"
+                            aria-label="Follow Aminul Islam on Twitter (opens in new window)"
                         >
-                            <i class="fa-brands fa-twitter" />
+                            <i class="fa-brands fa-twitter" aria-hidden="true" />
+                            <span class="sr-only">Twitter</span>
                         </a>
                     </li>
                     <li>
@@ -51,8 +53,10 @@
                             target="_blank"
                             class="header__link header__link--social"
                             rel="noopener noreferrer"
+                            aria-label="Connect with Aminul Islam on LinkedIn (opens in new window)"
                         >
-                            <i class="fa-brands fa-linkedin-in" />
+                            <i class="fa-brands fa-linkedin-in" aria-hidden="true" />
+                            <span class="sr-only">LinkedIn</span>
                         </a>
                     </li>
                     <li>
@@ -61,8 +65,10 @@
                             target="_blank"
                             class="header__link header__link--social"
                             rel="noopener noreferrer"
+                            aria-label="View LetterFlux source code on GitHub (opens in new window)"
                         >
-                            <i class="fa-brands fa-github-alt" />
+                            <i class="fa-brands fa-github-alt" aria-hidden="true" />
+                            <span class="sr-only">GitHub</span>
                         </a>
                     </li>
                 </ul>
@@ -219,6 +225,39 @@
         }
         to {
             opacity: 1;
+        }
+    }
+
+    /* Screen reader only text */
+    .sr-only {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+    }
+
+    /* Focus styles for keyboard navigation */
+    .header__link:focus-visible {
+        outline: 2px solid var(--color-secondary);
+        outline-offset: 2px;
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+        .header__link {
+            border-width: 3px;
+        }
+    }
+
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+        .header__subtitle--ready {
+            animation: none;
         }
     }
 </style>
