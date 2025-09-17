@@ -55,8 +55,10 @@
                     target="_blank"
                     class="footer__link footer__link--social"
                     rel="noopener noreferrer"
+                    aria-label="Follow Aminul Islam on Twitter (opens in new window)"
                 >
-                    <i class="fa-brands fa-twitter" />
+                    <i class="fa-brands fa-twitter" aria-hidden="true" />
+                    <span class="sr-only">Twitter</span>
                 </a>
             </li>
             <li class="footer__item">
@@ -65,8 +67,10 @@
                     target="_blank"
                     class="footer__link footer__link--social"
                     rel="noopener noreferrer"
+                    aria-label="Connect with Aminul Islam on LinkedIn (opens in new window)"
                 >
-                    <i class="fa-brands fa-linkedin-in" />
+                    <i class="fa-brands fa-linkedin-in" aria-hidden="true" />
+                    <span class="sr-only">LinkedIn</span>
                 </a>
             </li>
             <li class="footer__item">
@@ -75,8 +79,10 @@
                     target="_blank"
                     class="footer__link footer__link--social"
                     rel="noopener noreferrer"
+                    aria-label="View LetterFlux source code on GitHub (opens in new window)"
                 >
-                    <i class="fa-brands fa-github-alt" />
+                    <i class="fa-brands fa-github-alt" aria-hidden="true" />
+                    <span class="sr-only">GitHub</span>
                 </a>
             </li>
         </ul>
@@ -103,21 +109,42 @@
     }
 
     .footer__link {
-        text-decoration: none;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
         font-family: var(--font-family-primary);
+        font-weight: var(--font-weight-bold);
+        transition: all 0.2s ease;
     }
 
     .footer__link:hover,
-    .footer__link:active {
-        text-decoration: underline;
+    .footer__link:active,
+    .footer__link:focus {
+        text-decoration-thickness: 2px;
+        text-shadow: 0 0 1px currentColor;
     }
 
     .footer__link--primary {
         color: var(--color-secondary);
     }
 
+    .footer__link--primary:hover,
+    .footer__link--primary:focus {
+        color: var(--color-primary);
+    }
+
     .footer__link--secondary {
         color: var(--color-secondary);
+        background-color: var(--color-secondary-faded);
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+
+    .footer__link--secondary:hover,
+    .footer__link--secondary:focus {
+        color: var(--color-primary);
+        background-color: var(--color-primary-faded);
+        border-color: var(--color-primary-tint);
     }
 
     // .footer__section + .footer__section {
@@ -155,5 +182,73 @@
 
     .footer__item + .footer__item {
         margin-left: var(--spacing-n1);
+    }
+
+    /* Enhanced focus styles for accessibility */
+    .footer__link:focus-visible {
+        outline: 2px solid var(--color-secondary);
+        outline-offset: 2px;
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+        .footer__link {
+            text-decoration-thickness: 2px;
+            font-weight: var(--font-weight-bold);
+        }
+        
+        .footer__link--primary,
+        .footer__link--secondary {
+            border: 1px solid currentColor;
+            padding: 2px 4px;
+        }
+        
+        .footer__link--social {
+            border-width: 3px;
+        }
+    }
+
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+        .footer__link {
+            transition: none;
+        }
+    }
+
+    /* Screen reader only text */
+    .sr-only {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+    }
+
+    /* Improve section text contrast */
+    .footer__section {
+        color: var(--color-gray-light);
+        line-height: 1.6;
+    }
+
+    /* Heart icon styling */
+    .footer__icon {
+        color: var(--color-primary);
+        margin: 0 4px;
+        animation: heartbeat 2s ease-in-out infinite;
+    }
+
+    @keyframes heartbeat {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .footer__icon {
+            animation: none;
+        }
     }
 </style>
