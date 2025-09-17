@@ -103,6 +103,20 @@ For example:
     top: clamp(10px, 2vw + 5px, 50px);
 }
 ```
+## What Makes This Project Stand Out
+- Solves a real developer problem
+- Modern tech stack (Vue 3, ES6+, SCSS)
+- Production-ready features (PWA, accessibility)
+- Open source contribution
+- Clean, documented code
+- Responsive design principles
+
+## Key Metrics to Mention
+- Accessibility compliant (WCAG 2.1 AA)
+- Mobile-first responsive design
+- Zero dependencies for core functionality
+- Fast build times with Vite
+- SEO optimized with proper meta tags
 
 ## 🤝 Contributing
 
