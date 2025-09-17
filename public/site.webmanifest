@@ -1,0 +1,36 @@
+{
+    "name": "LetterFlux - Fluid CSS Properties Generator",
+    "short_name": "LetterFlux",
+    "description": "Create responsive CSS clamp() functions for typography, spacing, sizing, and positioning. Interactive visual editor with real-time preview, graph visualization, and code generation.",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#3b82f6",
+    "background_color": "#ffffff",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "en-US",
+    "categories": ["developer", "productivity", "utilities"],
+    "screenshots": [
+        {
+            "src": "/screenshot.png",
+            "sizes": "1200x630",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "LetterFlux main interface showing fluid typography configuration"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Home",
+            "short_name": "Home",
+            "description": "Go to the main LetterFlux interface",
+            "url": "/"
+        },
+        {
+            "name": "About",
+            "short_name": "About",
+            "description": "Learn more about LetterFlux",
+            "url": "/about"
+        }
+    ]
+}
