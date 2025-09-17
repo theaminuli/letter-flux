@@ -1,11 +1,11 @@
 <template>
     <main class="homepage">
-        <aside class="homepage__aside">
+        <aside class="homepage__aside" aria-label="Typography configuration form">
             <FluidTypographyForm />
         </aside>
 
-        <section class="homepage__content">
-            <Tabs :tabs="['Graph', 'Table']">
+        <section class="homepage__content" aria-label="Typography visualization and results">
+            <Tabs :tabs="['Graph', 'Table']" role="tabpanel">
                 <template #default="{ activeTab }">
                     <template v-if="activeTab === 0">
                         <Stats
@@ -37,15 +37,14 @@
 </template>
 
 <script setup>
-    import { computed } from 'vue'
-    import FluidTypographyForm from '../components/FluidTypographyForm.vue'
+    import AddValue from '../components/AddValue.vue'
+    import CodeSnippet from '../components/CodeSnippet.vue'
     import FluidTypographyChart from '../components/FluidTypographyChart.vue'
-    import Tabs from '../components/Tabs.vue'
+    import FluidTypographyForm from '../components/FluidTypographyForm.vue'
     import Legend from '../components/Legend.vue'
     import ShareButton from '../components/ShareButton.vue'
-    import CodeSnippet from '../components/CodeSnippet.vue'
     import Stats from '../components/Stats.vue'
-    import AddValue from '../components/AddValue.vue'
+    import Tabs from '../components/Tabs.vue'
     import Tracker from '../components/Tracker.vue'
     import { clampValue, maxSize, minSize } from '../stores/fluidTypographyStore.js'
     import { graphChangeEnd, graphChangeStart } from '../stores/graphStore.js'

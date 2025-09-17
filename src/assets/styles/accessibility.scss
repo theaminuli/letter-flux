@@ -1,0 +1,135 @@
+/* Global Accessibility Styles for LetterFlux */
+
+/* Screen reader only utility class */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Skip link styles */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Enhanced focus visibility */
+*:focus-visible {
+    outline: 2px solid var(--color-primary, #3b82f6);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    *:focus-visible {
+        outline-width: 3px;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+        border-width: 3px !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark mode support for accessibility */
+@media (prefers-color-scheme: dark) {
+    .skip-link {
+        background: #fff;
+        color: #000;
+    }
+}
+
+/* Print styles for accessibility */
+@media print {
+    .sr-only {
+        position: static !important;
+        width: auto !important;
+        height: auto !important;
+        padding: initial !important;
+        margin: initial !important;
+        overflow: visible !important;
+        clip: auto !important;
+        white-space: normal !important;
+        border: initial !important;
+    }
+
+    /* Show URLs for links */
+    a[href]:after {
+        content: ' (' attr(href) ')';
+    }
+}
+
+/* Keyboard navigation improvements */
+button:focus-visible,
+[role='button']:focus-visible,
+[role='tab']:focus-visible,
+[role='menuitem']:focus-visible {
+    outline: 2px solid var(--color-primary, #3b82f6);
+    outline-offset: 2px;
+}
+
+/* Ensure interactive elements have minimum touch target size */
+button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+[role='button'],
+[role='tab'] {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Improve readability */
+p,
+li,
+td,
+th {
+    line-height: 1.5;
+}
+
+/* Ensure color is not the only way to convey information */
+.error {
+    border-left: 4px solid red;
+    padding-left: 8px;
+}
+
+.warning {
+    border-left: 4px solid orange;
+    padding-left: 8px;
+}
+
+.success {
+    border-left: 4px solid green;
+    padding-left: 8px;
+}

@@ -6,5 +6,6 @@
 @forward './scrollbar.scss';
 @forward './range.scss';
 @forward './page.scss';
+@forward './accessibility.scss';
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+/* Font is now preloaded in HTML head for better performance */

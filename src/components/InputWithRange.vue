@@ -5,6 +5,7 @@
         <div class="input__wrapper">
             <input
                 :id="id"
+                :aria-describedby="id + '-description'"
                 class="input__element"
                 type="number"
                 :value="modelValue"
@@ -15,6 +16,7 @@
         </div>
         <input
             :aria-labelledby="id"
+            :aria-describedby="id + '-description'"
             class="input__range"
             type="range"
             :value="modelValue"
@@ -90,5 +92,32 @@
     .input__range {
         display: block;
         width: 100%;
+    }
+
+    /* Enhanced focus styles for accessibility */
+    .input__element:focus {
+        outline: 3px solid var(--color-secondary);
+        outline-offset: 3px;
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+        .input__wrapper {
+            border-width: 3px;
+        }
+
+        .input__element:focus,
+        .input__range:focus {
+            outline-width: 3px;
+        }
+    }
+
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+        .input__wrapper,
+        .input__element,
+        .input__range {
+            transition: none;
+        }
     }
 </style>

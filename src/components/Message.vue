@@ -5,13 +5,23 @@
             @mouseenter="showTooltip = true"
             @mouseleave="showTooltip = false"
             @click="showTooltip = true"
+            @keydown.escape="showTooltip = false"
             class="tooltip-button"
+            :aria-describedby="showTooltip ? id + '-message' : null"
+            :aria-expanded="showTooltip"
+            aria-label="Show validation message"
         >
-            <i :class="`fa-solid fa-triangle-exclamation tooltip__icon tooltip__icon--${type}`" />
+            <i
+                :class="`fa-solid fa-triangle-exclamation tooltip__icon tooltip__icon--${type}`"
+                aria-hidden="true"
+            />
         </button>
         <div
             ref="tooltipRef"
             :class="['tooltip__message', { 'tooltip__message--visible': showTooltip }]"
+            :id="id + '-message'"
+            role="tooltip"
+            :aria-live="type === 'error' ? 'assertive' : 'polite'"
         >
             <div class="tooltip__message-inner">
                 <slot />
@@ -21,8 +31,8 @@
 </template>
 
 <script setup>
-    import { ref, onMounted } from 'vue'
     import { computePosition } from '@floating-ui/dom'
+    import { onMounted, ref } from 'vue'
     import { clickOutside } from '../utils/clickOutside.js'
 
     const vClickOutside = clickOutside
@@ -112,5 +122,23 @@
 
     .tooltip__message--visible {
         display: initial;
+    }
+
+    /* Enhanced focus styles for accessibility */
+    .tooltip-button:focus-visible {
+        outline: 2px solid var(--color-tertiary);
+        outline-offset: 2px;
+        border-radius: 2px;
+    }
+
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+        .tooltip__message {
+            border-width: 3px;
+        }
+
+        .tooltip-button:focus-visible {
+            outline-width: 3px;
+        }
     }
 </style>
