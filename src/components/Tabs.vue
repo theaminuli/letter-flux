@@ -10,10 +10,11 @@
                 v-for="(label, index) in tabs"
                 :key="index"
                 :class="['tab__button', { 'tab__button--active': index === activeTab }]"
-                :aria-selected="index === activeTab"
+                :aria-selected="index === activeTab ? 'true' : 'false'"
                 :aria-controls="`tabpanel-${index}`"
                 :id="`tab-${index}`"
                 role="tab"
+                :tabindex="index === activeTab ? 0 : -1"
                 @click="activeTab = index"
                 @keydown="handleKeydown"
             >
@@ -40,26 +41,37 @@
     const handleKeydown = (event) => {
         const { key } = event
         const tabCount = props.tabs.length
+        let newTabIndex = activeTab.value
 
         switch (key) {
             case 'ArrowLeft':
             case 'ArrowUp':
                 event.preventDefault()
-                activeTab.value = activeTab.value > 0 ? activeTab.value - 1 : tabCount - 1
+                newTabIndex = activeTab.value > 0 ? activeTab.value - 1 : tabCount - 1
                 break
             case 'ArrowRight':
             case 'ArrowDown':
                 event.preventDefault()
-                activeTab.value = activeTab.value < tabCount - 1 ? activeTab.value + 1 : 0
+                newTabIndex = activeTab.value < tabCount - 1 ? activeTab.value + 1 : 0
                 break
             case 'Home':
                 event.preventDefault()
-                activeTab.value = 0
+                newTabIndex = 0
                 break
             case 'End':
                 event.preventDefault()
-                activeTab.value = tabCount - 1
+                newTabIndex = tabCount - 1
                 break
+            default:
+                return
+        }
+
+        activeTab.value = newTabIndex
+        
+        // Focus the newly activated tab
+        const newTab = document.getElementById(`tab-${newTabIndex}`)
+        if (newTab) {
+            newTab.focus()
         }
     }
 </script>
