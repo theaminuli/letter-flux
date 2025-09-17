@@ -73,7 +73,7 @@
 
 <script setup>
     import { onMounted, ref } from 'vue'
-    import { currentSubtitle } from '../stores/currentSubtitle.js'
+    import { currentSubtitle } from '../../stores/currentSubtitle.js'
 
     const subtitles = [
         'Created by',
@@ -96,7 +96,7 @@
 </script>
 
 <style lang="scss" scoped>
-    @use '../assets/styles/media.scss' as media;
+    @use '../../assets/styles/media.scss' as media;
 
     .header {
         margin-bottom: var(--spacing-1);
@@ -125,6 +125,9 @@
 
     .header__title {
         font-size: var(--font-size-medium);
+        font-size: 50px;
+        font-weight: 700;
+        margin: 0px;
     }
 
     .header__subtitle {
