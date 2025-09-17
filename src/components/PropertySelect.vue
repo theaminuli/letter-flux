@@ -43,11 +43,6 @@
                     @click="selectOption(option)"
                     @mouseenter="highlightedIndex = index"
                 >
-                    <!-- Icon for each property type -->
-                    <span class="custom-select__icon">
-                        {{ getPropertyIcon(option.value) }}
-                    </span>
-
                     <!-- Option Label -->
                     <span class="custom-select__text">
                         {{ option.label }}
@@ -75,7 +70,7 @@
 <script setup>
     import { computed, ref } from 'vue'
     import { clickOutside } from '../utils/clickOutside.js'
-    import { getPropertyIcon, getSelectedLabel, propertyOptions } from '../utils/propertyUtils.js'
+    import { getSelectedLabel, propertyOptions } from '../utils/propertyUtils.js'
 
     const props = defineProps({
         modelValue: {
@@ -206,7 +201,7 @@
         top: 100%;
         left: 0;
         right: 0;
-        z-index: 1000;
+        z-index: 99;
         border: 2px solid var(--color-primary);
         border-radius: 5px;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
@@ -259,7 +254,7 @@
         font-weight: var(--font-weight-medium);
         color: var(--color-text-primary);
         font-size: var(--font-size-base);
-        padding: 10px 5px;
+        padding: 10px 10px;
     }
 
     .custom-select__check {

@@ -88,14 +88,14 @@
 </script>
 
 <style lang="scss" scoped>
-    @use '../assets/styles/media.scss' as media;
+    @use '../../assets/styles/media.scss' as media;
 
     .footer {
         text-align: center;
         padding: var(--spacing-2) var(--spacing-n1);
         background-color: var(--color-gray-medium-faded);
         border-top: 2px solid var(--color-gray-medium);
-        font-weight: var(--font-weight-bold);
+        font-weight: var(--font-weight-regular);
 
         @include media.mq-tablet-min {
             padding: var(--spacing-2);
@@ -113,16 +113,16 @@
     }
 
     .footer__link--primary {
-        color: var(--color-primary);
+        color: var(--color-secondary);
     }
 
     .footer__link--secondary {
         color: var(--color-secondary);
     }
 
-    .footer__section + .footer__section {
-        margin-top: var(--spacing-1);
-    }
+    // .footer__section + .footer__section {
+    //     margin-top: var(--spacing-1);
+    // }
 
     .footer__link--social {
         display: flex;

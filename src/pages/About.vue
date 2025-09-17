@@ -6,36 +6,35 @@
         </h1>
         <section class="intro">
             <p>
-                I was going through Josh Comeau's
-                <a href="https://www.joshwcomeau.com/" target="_blank" rel="noopener noreferrer">
-                    CSS for JS devs
-                </a>
-                course which is one of the best courses on CSS in general and I recommend checking
-                it out. In one of the lessons, Josh implemented a simple fluid typography editor,
-                mainly for demonstration purposes to showcase how fluid typography changes depending
-                on the screen size.
+                This project was inspired by various excellent resources on modern CSS techniques
+                that you can find linked in the footer section of this website. These resources
+                from CSS experts have explored fluid typography and responsive design concepts,
+                providing the foundation and inspiration for creating a practical tool that goes 
+                beyond simple demonstrations to showcase how fluid CSS properties can adapt across 
+                different screen sizes.
             </p>
             <p>
                 I saw an opportunity for doing a <strong>really fun and useful project</strong>. I
-                set out to build upon Josh's concept and developed a fully-fledged tool that
-                developers could use on a day-to-day basis to fine-tune and keep track of their
-                fluid typography and help to keep fluid typography behavior consistent across the
-                significant breakpoints.
+                developed a fully-fledged tool that developers could use on a day-to-day basis 
+                to fine-tune and keep track of their fluid CSS properties including typography, 
+                spacing, sizing, positioning, and layout properties, helping to maintain consistent 
+                responsive behavior across different breakpoints.
             </p>
         </section>
 
         <section>
-            <h2>Fluid typography</h2>
+            <h2>Fluid CSS Properties</h2>
             <p>
-                Fluid typography is a modern way of approaching responsive typography. Instead of
-                setting fixed typography values for individual screen sizes, we can set a single
+                Fluid CSS is a modern way of approaching responsive design for various CSS properties. Instead of
+                setting fixed values for individual screen sizes, we can set a single
                 fluid value and let the CSS render the appropriate values for a specific screen size
-                constrained by minimum and maximum values.
+                constrained by minimum and maximum values. This applies to typography, spacing, sizing, positioning, and layout properties.
             </p>
 
             <p>
-                Try resizing the screen and notice how the "About the project & user guide" adapts
-                to screen size, but is constrained at some specific minimum and maximum value. Cool,
+                Try resizing the screen and notice how the "About the project & user guide" title adapts
+                to screen size, but is constrained at some specific minimum and maximum value. This same principle 
+                can be applied to margins, padding, widths, and many other CSS properties. Cool,
                 isn't it?
             </p>
         </section>
@@ -85,16 +84,18 @@
             <h2>Features</h2>
             <p>Here is a short overview of some of the features of this editor:</p>
             <ul>
-                <li>Adjust size constraints, rate, and relative size</li>
-                <li>Adapts to any root font size</li>
+                <li>Support for multiple CSS properties (typography, spacing, sizing, positioning, layout)</li>
+                <li>Adjust constraints, rate, and relative size for any supported property</li>
+                <li>Adapts to any root font size for relative units</li>
                 <li>Graphical overview of the final fluid values</li>
-                <li>Table view for keeping track of values on fixed screen width sizes.</li>
+                <li>Table view for keeping track of values on fixed screen width sizes</li>
             </ul>
             <h3>Adjusting fluid settings</h3>
             <p>
-                Fluid typography settings can be easily adjusted either by using numerical inputs
+                Fluid CSS property settings can be easily adjusted either by using numerical inputs
                 for more precise inputs or using range inputs for fine-tuning and smaller changes to
-                easily track changes on the graph or table.
+                easily track changes on the graph or table. First select your desired CSS property,
+                then configure its fluid behavior.
             </p>
             <figure>
                 <img
@@ -124,16 +125,17 @@
             </figure>
             <h3>Graph view</h3>
             <p>
-                Graph view can give you a general overview of fluid typography behavior. By hovering
-                over the graph you can inspect individual values on specific screen sizes.
+                Graph view can give you a general overview of fluid CSS property behavior. By hovering
+                over the graph you can inspect individual values on specific screen sizes for any
+                selected property.
             </p>
             <figure>
                 <img
                     src="/images/graph-increase.png"
-                    alt="Graphic overview of fluid typography behavior for default settings"
+                    alt="Graphic overview of fluid CSS property behavior for default settings"
                 />
                 <figcaption>
-                    A high-level overview of fluid typography behavior. Fluid value starts
+                    A high-level overview of fluid CSS behavior. Fluid value starts
                     increasing from min-size to max size at around 400px of the viewport width and
                     it stops at a maximum value at around 1000px,
                 </figcaption>
@@ -145,7 +147,7 @@
             <h3>Table view</h3>
 
             <p>
-                A table view can give you a more detailed overview of fluid font sizes for specific
+                A table view can give you a more detailed overview of fluid property values for specific
                 viewport sizes. Viewport sizes can be easily added using the adjacent input.
                 Likewise, individual values can be removed from the list by clicking the remove
                 button for a specific value.
@@ -189,44 +191,69 @@
             </p>
         </section>
 
-		<section>
-			<h2>Responsive properties</h2>
-			<p>
-				In addition to <strong>fluid typography</strong>, this editor also supports
-				generating responsive values for various CSS properties.  
-				You can choose from a dropdown list of properties such as:
-			</p>
-			<ul>
-				<li>Font Size</li>
-				<li>Line Height</li>
-				<li>Letter Spacing</li>
-				<li>Word Spacing</li>
-				<li>Margin</li>
-				<li>Padding</li>
-				<li>Gap</li>
-				<li>Position (Top, Right, Bottom, Left)</li>
-			</ul>
+        <section>
+            <h2>Supported CSS Properties</h2>
+            <p>
+                This editor supports generating fluid, responsive values for a comprehensive range of CSS properties. 
+                You can choose from a dropdown list of properties organized by category:
+            </p>
+            
+            <h3>Typography Properties</h3>
+            <ul>
+                <li>Font Size</li>
+                <li>Line Height</li>
+                <li>Letter Spacing</li>
+                <li>Word Spacing</li>
+            </ul>
 
-			<p>
-				Each selected property will generate a corresponding
-				<code>clamp()</code> formula, ensuring responsive behavior
-				across devices. For example:
-			</p>
+            <h3>Spacing Properties</h3>
+            <ul>
+                <li>Margin</li>
+                <li>Padding</li>
+                <li>Gap</li>
+            </ul>
 
-			<pre><code>
-			/* Example: Responsive top spacing */
-			top: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+            <h3>Sizing Properties</h3>
+            <ul>
+                <li>Width</li>
+                <li>Max Width</li>
+                <li>Flex Basis</li>
+            </ul>
 
-			/* Example: Responsive margin */
-			margin: clamp(12px, 1vw + 0.5rem, 32px);
-			</code></pre>
+            <h3>Layout & Styling Properties</h3>
+            <ul>
+                <li>Border Radius</li>
+                <li>Border Width</li>
+                <li>Position Top</li>
+                <li>Position Left</li>
+                <li>Transition Duration</li>
+            </ul>
 
-			<p>
-				This allows you to build layouts that adapt smoothly
-				without relying on fixed breakpoints.
-			</p>
-		</section>
+            <p>
+                Each selected property will generate a corresponding
+                <code>clamp()</code> formula, ensuring responsive behavior across devices. For
+                example:
+            </p>
 
+            <pre><code>
+/* Typography example */
+font-size: clamp(1rem, 2.5vw + 0.5rem, 2.5rem);
+
+/* Spacing example */
+padding: clamp(1rem, 3vw, 3rem);
+
+/* Positioning example */
+top: clamp(10px, 2vw + 5px, 50px);
+
+/* Sizing example */
+width: clamp(200px, 50vw, 800px);
+</code></pre>
+
+            <p>
+                This allows you to build layouts that adapt smoothly across all device sizes
+                without relying on fixed breakpoints, creating truly fluid and responsive designs.
+            </p>
+        </section>
     </main>
 </template>
 
@@ -244,9 +271,9 @@
     }
 
     .title {
-        font-size: clamp(2rem, 6vw + 1rem, 32rem);
+        font-size: clamp(2rem, 4vw + 1rem, 10rem);
         line-height: 1.25;
-        min-height: calc(100vh - 100px - var(--spacing-2));
+        min-height: calc(100vh - 400px - var(--spacing-2));
         display: flex;
         justify-content: center;
         align-items: center;
@@ -335,7 +362,7 @@
     }
 
     section {
-        max-width: 820px;
+        max-width: 920px;
         margin: 0 auto;
         margin-bottom: var(--spacing-2);
         padding: 0 var(--spacing-n1);

@@ -4,13 +4,14 @@
 
 # LetterFlux
 
-A powerful, interactive tool for creating and fine-tuning fluid typography using CSS clamp() function. Built with Vue.js 3 and modern web technologies.
+A powerful, interactive tool for creating and fine-tuning fluid CSS properties using CSS clamp() function. Built with Vue.js 3 and modern web technologies.
 
 ## 🚀 Features
 
 - **Interactive Editor**: Adjust min/max values, change rates, and relative sizing with intuitive controls
-- **Live Preview**: Real-time graph visualization of fluid typography behavior
-- **Table View**: Detailed breakdown of font sizes across different viewport widths
+- **Multi-Property Support**: Generate fluid values for typography, spacing, sizing, positioning, and layout properties
+- **Live Preview**: Real-time graph visualization of fluid CSS behavior
+- **Table View**: Detailed breakdown of property values across different viewport widths
 - **Code Generation**: Automatic CSS `clamp()` code generation with copy functionality
 - **Responsive Design**: Fully responsive interface that works on all devices
 - **Share & Export**: Easy sharing and exporting of configurations
@@ -59,25 +60,50 @@ npm run format:all   # Format and fix all issues
 
 ## 💡 Usage
 
-1. **Adjust Settings**: Use the form controls to set minimum and maximum font sizes
-2. **Fine-tune**: Use range sliders for precise adjustments
-3. **Visualize**: View the fluid behavior on the interactive graph
-4. **Inspect**: Check specific viewport sizes in the table view
-5. **Copy Code**: Generate and copy the CSS clamp() function
-6. **Share**: Share your configuration with others
+1. **Select Property**: Choose from various CSS properties (typography, spacing, sizing, positioning, etc.)
+2. **Adjust Settings**: Use the form controls to set minimum and maximum values
+3. **Fine-tune**: Use range sliders for precise adjustments
+4. **Visualize**: View the fluid behavior on the interactive graph
+5. **Inspect**: Check specific viewport sizes in the table view
+6. **Copy Code**: Generate and copy the CSS clamp() function
+7. **Share**: Share your configuration with others
 
-## 🎨 What is Fluid Typography?
+## 🎨 What is Fluid CSS?
 
-Fluid typography is a modern approach to responsive design that allows font sizes to scale smoothly between minimum and maximum values based on viewport width.  
-It uses the CSS [`clamp()`](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp) function to define a value that adapts automatically across screen sizes.
+Fluid CSS is a modern approach to responsive design that allows CSS property values to scale smoothly between minimum and maximum values based on viewport width.  
+It uses the CSS [`clamp()`](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp) function to define values that adapt automatically across screen sizes.
+
+### Supported Properties
+
+This tool supports generating fluid values for various CSS properties:
+
+**Typography:** Font Size, Line Height, Letter Spacing, Word Spacing
+
+**Spacing:**  Margin, Padding, Gap
+
+**Sizing:** Width, Max Width, Flex Basis
+
+**Layout & Styling:** Border Radius, Border Width, Position (Top, Left), Transition Duration
 
 For example:
 
 ```css
+/* Fluid typography */
 .title {
-  font-size: clamp(1rem, 2vw + 1rem, 2.5rem);
+    font-size: clamp(1rem, 2vw + 1rem, 2.5rem);
+}
+
+/* Fluid spacing */
+.container {
+    padding: clamp(1rem, 3vw, 3rem);
+}
+
+/* Fluid positioning */
+.element {
+    top: clamp(10px, 2vw + 5px, 50px);
 }
 ```
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.

@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-    import { ref, computed } from 'vue'
+    import { computed, ref } from 'vue'
     import { trackersAsc, trackersDesc } from '../stores/trackerStore.js'
     import Sort from './Sort.vue'
     import TrackerRow from './TrackerRow.vue'
@@ -60,6 +60,7 @@
         position: sticky;
         top: 0;
         background-color: var(--color-gray-dark);
+        z-index: -1;
     }
 
     .tracker thead tr {
