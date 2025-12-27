@@ -103,6 +103,20 @@ For example:
     top: clamp(10px, 2vw + 5px, 50px);
 }
 ```
+## Project Highlights
+- Addresses common pain points in configuring and visualizing fluid CSS values
+- Built with a modern tech stack (Vue 3, ES6+, SCSS)
+- Includes production-oriented features such as PWA support and accessibility considerations
+- Fully open source and open to community contributions
+- Emphasizes clear structure and documented code
+- Designed with responsive layout principles for a consistent experience across devices
+
+## Technical Features & Metrics
+- Targets WCAG 2.1 AA accessibility guidelines
+- Mobile-first, responsive user interface
+- Zero runtime dependencies for core functionality
+- Fast development and build tooling provided by Vite
+- Includes basic SEO meta tags for improved sharing and search indexing
 
 ## 🤝 Contributing
 
@@ -117,8 +131,8 @@ This project is open source and available under the [GPL License](LICENSE).
 **Aminul Islam**
 
 - GitHub: [@theaminuli](https://github.com/theaminuli)
-- Twitter: [@theaminuli](https://twitter.com/theaminuli)
-- LinkedIn: [theaminuli](https://linkedin.com/in/theaminuli)
+- Twitter: [@theaminulai](https://twitter.com/theaminulai)
+- LinkedIn: [theaminulai](https://linkedin.com/in/theaminulai)
 
 ## 🙏 Inspiration & Resources
 
