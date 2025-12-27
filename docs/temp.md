@@ -1,8 +1,11 @@
-"Tell me about a project you're proud of"
-"I built LetterFlux to solve a pain point I experienced - CSS clamp() is powerful but hard to visualize. I created an interactive editor that shows real-time graphs of how fluid properties behave across screen sizes."
+# LetterFlux Overview
 
-"How do you approach performance?"
-"I implemented a service worker for caching, used Vue's built-in lazy loading, and optimized the component architecture to minimize re-renders. The app loads instantly on repeat visits."
+LetterFlux is an interactive tool for visualizing how CSS `clamp()`-based fluid properties behave across different screen sizes. It provides real-time graphs that help designers and developers understand and fine-tune responsive typography and layout values.
 
-"Describe a technical challenge you solved"
-"The biggest challenge was making the graph update smoothly in real-time while maintaining 60fps. I used Vue's reactivity system efficiently and debounced calculations to prevent unnecessary updates."
+## Performance Approach
+
+LetterFlux uses a service worker for caching static assets so that repeat visits load quickly, even on slower networks. The application also leverages Vue's built-in lazy loading to defer loading non-critical views and components, and its component architecture is structured to minimize unnecessary re-renders.
+
+## Real-time Graph Updates
+
+To keep graph updates smooth while maintaining a target of 60fps, LetterFlux uses Vue's reactivity system efficiently and debounces expensive calculations. This reduces redundant updates when users interact rapidly with the controls, ensuring responsive and fluid animations during real-time visualization.
