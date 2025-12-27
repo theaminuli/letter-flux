@@ -131,8 +131,8 @@ This project is open source and available under the [GPL License](LICENSE).
 **Aminul Islam**
 
 - GitHub: [@theaminuli](https://github.com/theaminuli)
-- Twitter: [@theaminuli](https://twitter.com/theaminulai)
-- LinkedIn: [theaminuli](https://linkedin.com/in/theaminulai)
+- Twitter: [@theaminulai](https://twitter.com/theaminulai)
+- LinkedIn: [theaminulai](https://linkedin.com/in/theaminulai)
 
 ## 🙏 Inspiration & Resources
 
