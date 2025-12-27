@@ -37,7 +37,7 @@
                     </li>
                     <li>
                         <a
-                            href="https://twitter.com/theaminuli"
+                            href="https://twitter.com/theaminulai"
                             target="_blank"
                             class="header__link header__link--social"
                             rel="noopener noreferrer"
@@ -49,7 +49,7 @@
                     </li>
                     <li>
                         <a
-                            href="https://www.linkedin.com/in/theaminuli/"
+                            href="https://www.linkedin.com/in/theaminulai/"
                             target="_blank"
                             class="header__link header__link--social"
                             rel="noopener noreferrer"

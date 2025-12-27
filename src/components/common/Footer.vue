@@ -51,7 +51,7 @@
         <ul class="footer__links">
             <li class="footer__item">
                 <a
-                    href="https://twitter.com/theaminuli"
+                    href="https://twitter.com/theaminulai"
                     target="_blank"
                     class="footer__link footer__link--social"
                     rel="noopener noreferrer"
@@ -63,7 +63,7 @@
             </li>
             <li class="footer__item">
                 <a
-                    href="https://www.linkedin.com/in/theaminuli/"
+                    href="https://www.linkedin.com/in/theaminulai/"
                     target="_blank"
                     class="footer__link footer__link--social"
                     rel="noopener noreferrer"
