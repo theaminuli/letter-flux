@@ -54,4 +54,4 @@ Sitemap: https://letter-flux.vercel.app/sitemap.xml
 
 # Additional information
 # Host: https://letter-flux.vercel.app
-# Contact: https://github.com/theaminuli/letter-flux
+# Contact: https://github.com/theaminulai/letter-flux

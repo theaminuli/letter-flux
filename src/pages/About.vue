@@ -174,7 +174,7 @@
             <p>
                 Found any bugs or have a suggestion? Feel free to open an issue in
                 <a
-                    href="https://github.com/theaminuli/letter-flux"
+                    href="https://github.com/theaminulai/letter-flux"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -184,7 +184,7 @@
             <p>
                 Feel free to contribute code to the project by
                 <a
-                    href="https://github.com/theaminuli/letter-flux"
+                    href="https://github.com/theaminulai/letter-flux"
                     target="_blank"
                     rel="noopener noreferrer"
                 >

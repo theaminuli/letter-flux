@@ -17,7 +17,7 @@
                         {{ currentSubtitle }}
                         <a
                             class="header__link header__link--subtitle"
-                            href="https://github.com/theaminuli"
+                            href="https://github.com/theaminulai"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -61,7 +61,7 @@
                     </li>
                     <li>
                         <a
-                            href="https://github.com/theaminuli/letter-flux"
+                            href="https://github.com/theaminulai/letter-flux"
                             target="_blank"
                             class="header__link header__link--social"
                             rel="noopener noreferrer"
