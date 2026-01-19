@@ -7,9 +7,9 @@
     "description": "A modern fluid typography editor built with Vue.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/theaminuli/letter-flux"
+        "url": "https://github.com/theaminulai/letter-flux"
     },
-    "homepage": "https://github.com/theaminuli/letter-flux#readme",
+    "homepage": "https://github.com/theaminulai/letter-flux#readme",
     "scripts": {
         "dev": "vite",
         "build": "vite build",

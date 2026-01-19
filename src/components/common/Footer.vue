@@ -41,7 +41,7 @@
             <i class="fa-solid fa-heart footer__icon" />
             <a
                 class="footer__link footer__link--secondary"
-                href="https://github.com/theaminuli"
+                href="https://github.com/theaminulai"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -75,7 +75,7 @@
             </li>
             <li class="footer__item">
                 <a
-                    href="https://github.com/theaminuli/letter-flux"
+                    href="https://github.com/theaminulai/letter-flux"
                     target="_blank"
                     class="footer__link footer__link--social"
                     rel="noopener noreferrer"

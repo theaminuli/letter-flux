@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/theaminuli/letter-flux/refs/heads/main/screenshot.png" alt="letter-flux"/>
+  <img src="https://raw.githubusercontent.com/theaminulai/letter-flux/refs/heads/main/screenshot.png" alt="letter-flux"/>
 </div>
 
 # LetterFlux
@@ -29,7 +29,7 @@ A powerful, interactive tool for creating and fine-tuning fluid CSS properties u
 
 ```bash
 # Clone the repository
-git clone https://github.com/theaminuli/letter-flux.git
+git clone https://github.com/theaminulai/letter-flux.git
 
 # Navigate to project directory
 cd letter-flux
@@ -130,7 +130,7 @@ This project is open source and available under the [GPL License](LICENSE).
 
 **Aminul Islam**
 
-- GitHub: [@theaminuli](https://github.com/theaminuli)
+- GitHub: [@theaminulai](https://github.com/theaminulai)
 - Twitter: [@theaminulai](https://twitter.com/theaminulai)
 - LinkedIn: [theaminulai](https://linkedin.com/in/theaminulai)
 
